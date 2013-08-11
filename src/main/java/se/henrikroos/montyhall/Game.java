@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.TreeSet;
 
 /**
- * Playing one game of Monty Hall. Should the player swish the door? 
- * 
+ * Playing one game of Monty Hall. Should the player swish the door?
+ *
  * @author hero
  */
 public class Game
@@ -56,13 +56,25 @@ public class Game
     }
 
     /**
-     * Should the player switch the door for pick the car?
+     * The player switch the door of choice.
+     */
+    public void switchDoor()
+    {
+        Integer[] doors = {1, 2, 3};
+        TreeSet<Integer> doorsSet = new TreeSet<Integer>(Arrays.asList(doors));
+        doorsSet.remove(playerChoice);
+        doorsSet.remove(getHostChoice());
+        playerChoice = doorsSet.first();
+    }
+
+    /**
+     * Did the palyer win the game?
      *
      * @return true or false
      */
-    public boolean shouldChange()
+    public boolean didPalyerWin()
     {
-        return playerChoice != carLocation;
+        return playerChoice == carLocation;
     }
 
     /**
