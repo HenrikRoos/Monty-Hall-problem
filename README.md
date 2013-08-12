@@ -10,8 +10,8 @@ Suppose you're on a game show, and you're given the choice of three doors: Behin
 Write a program in Java randomly simulating this event over and over again in the quest of answering following question. Do I stand a better chance to win if I change my mind? Maven should be used.
 
 ##Install and Run
-  $ git clone https://github.com/HenrikRoos/Monty-Hall-problem
-  $ cd Monty-Hall-problem/
-  $ mvn package
-  $ java -jar target/montyhall.jar 1000
+    $ git clone https://github.com/HenrikRoos/Monty-Hall-problem
+    $ cd Monty-Hall-problem/
+    $ mvn package
+    $ java -jar target/montyhall.jar 1000
 ***Note: 1000 is number of games***
