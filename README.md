@@ -14,4 +14,4 @@ Write a program in Java randomly simulating this event over and over again in th
     $ cd Monty-Hall-problem/
     $ mvn package
     $ java -jar target/montyhall.jar 1000
-***Note: 1000 is number of games***
+**Note: 1000 is number of games**
