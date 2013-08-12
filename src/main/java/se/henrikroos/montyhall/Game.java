@@ -5,9 +5,9 @@ import java.util.Random;
 import java.util.TreeSet;
 
 /**
- * Playing one game of Monty Hall. Should the player swish the door?
+ * Playing the game of Monty Hall. Should the player switch the door or not?
  *
- * @author hero
+ * @author Henrik Roos
  */
 public class Game
 {
@@ -16,7 +16,7 @@ public class Game
     private int playerChoice;
 
     /**
-     * Create an instance with randomized car location and player choice.
+     * Start a game where the car location and the players choice is random.
      */
     public Game()
     {
@@ -25,7 +25,7 @@ public class Game
     }
 
     /**
-     * Did the palyer win the game?
+     * Did the player win the game?
      *
      * @return true or false
      */
@@ -35,7 +35,7 @@ public class Game
     }
 
     /**
-     * The player switch the door after the host open one door. Use
+     * The player can switch the door after the host opens one of the doors. 
      *
      * @see getPlayerChoice() for get the new door.
      */
@@ -49,7 +49,7 @@ public class Game
     }
 
     /**
-     * The host, who knows what's behind the doors, opens this door.
+     * The host opens this door.
      *
      * @return 1, 2 or 3
      */
@@ -63,7 +63,7 @@ public class Game
     }
 
     /**
-     * Get the location where the car is (the price), door 1, 2 or 3.
+     * Get the location where the price is (the car), door 1, 2 or 3.
      *
      * @return 1, 2 or 3
      */

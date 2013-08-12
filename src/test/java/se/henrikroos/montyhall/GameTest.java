@@ -58,7 +58,7 @@ public class GameTest
     }
 
     /**
-     * Test of getHostChoice method, run all doors and the host should not pick the
+     * Test of getHostChoice method, run all doors, the host does not pick the
      * car.
      */
     @Test
@@ -106,7 +106,7 @@ public class GameTest
     }
 
     /**
-     * Test of didPalyerWin method, of class Game.
+     * Test of didPalyerWin method, class of Game.
      */
     @Test
     public void testDidPalyerWin()

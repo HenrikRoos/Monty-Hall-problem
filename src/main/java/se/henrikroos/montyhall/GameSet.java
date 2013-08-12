@@ -1,7 +1,7 @@
 package se.henrikroos.montyhall;
 
 /**
- * Run a set of Monty Hall games.
+ * Run a set of the Monty Hall game.
  *
  * @author Henrik Roos
  */
@@ -15,20 +15,18 @@ public class GameSet
             short winsOnNotSwitching = countWinsOnNotSwitching(number);
             short winsOnSwitching = countWinsOnSwitching(number);
 
-            System.out.println("Number of games: " + number);
+            System.out.println("\nNumber of games: " + number);
             System.out.println("-----------------------");
             System.out.println(
-                    "Number of wins then the player do not swith the door: "
+                    "Number of wins when the player do not switch door: "
                     + winsOnNotSwitching);
             System.out.println(
-                    "Number of wins then the player do swith the door:     "
+                    "Number of wins when the player do switch door:     "
                     + winsOnSwitching);
             System.out.println(
-                    "Is it better to switch the door? "
-                    + isItBetterToSwitch(winsOnSwitching, winsOnNotSwitching));
+                    "Is it better to switch the door?                   "
+                    + isItBetterToSwitch(winsOnSwitching, winsOnNotSwitching) + "\n");
         } catch (Exception e) {
-            System.out.println(
-                    "Usage: $ GameSet.jar n (n = number of number of games)");
             System.out.println(e.getLocalizedMessage());
         }
     }
@@ -38,8 +36,8 @@ public class GameSet
      * winsOnSwitching < winsOnNotSwitching : no winsOnSwitching = winsOnNotSwitching
      * : no matter
      *
-     * @param winsOnSwitching Number of wins then switching the door
-     * @param winsOnNotSwitching Number of wins then not switching the door
+     * @param winsOnSwitching Number of wins when switching door
+     * @param winsOnNotSwitching Number of wins when not switching door
      *
      * @return "no matter", "yes" or "no"
      */
@@ -65,7 +63,7 @@ public class GameSet
     {
         if (args.length == 0) {
             throw new IllegalArgumentException(
-                    "Enter number of games you will run as argument.");
+                    "Enter the number of games you will run as argument.");
         }
         try {
             return Short.parseShort(args[0]);
@@ -80,7 +78,7 @@ public class GameSet
      *
      * @throws IndexOutOfBoundsException Only positive number
      *
-     * @param number How many game will you run.
+     * @param number How many games will you run.
      *
      * @return number of prizes
      */
