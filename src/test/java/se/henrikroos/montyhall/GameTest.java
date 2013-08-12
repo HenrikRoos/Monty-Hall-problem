@@ -2,6 +2,8 @@ package se.henrikroos.montyhall;
 
 import java.util.HashSet;
 import org.junit.Test;
+import org.junit.Rule;
+import org.junit.rules.Timeout;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
@@ -14,10 +16,13 @@ import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
 public class GameTest
 {
 
+    @Rule
+    public Timeout globalTimeout = new Timeout(100);
+
     /**
      * Test of getCarLocation method return if and only if all doors.
      */
-    @Test(timeout = 3000)
+    @Test
     public void testGetCarLocation()
     {
         //Given
@@ -36,7 +41,7 @@ public class GameTest
     /**
      * Test of getPlayerChoice method return if and only if all doors.
      */
-    @Test(timeout = 3000)
+    @Test
     public void testGetPlayerChoice()
     {
         //Given
@@ -56,7 +61,7 @@ public class GameTest
      * Test of getHostChoice method, run all doors and the host should not pick the
      * car.
      */
-    @Test(timeout = 6000)
+    @Test
     public void testGetHostChoice()
     {
         //Given
@@ -79,7 +84,7 @@ public class GameTest
     /**
      * Test of switchDoor method, of class Game.
      */
-    @Test(timeout = 6000)
+    @Test
     public void testSwitchDoor()
     {
         //Given
@@ -103,7 +108,7 @@ public class GameTest
     /**
      * Test of didPalyerWin method, of class Game.
      */
-    @Test(timeout = 3000)
+    @Test
     public void testDidPalyerWin()
     {
         //Given
