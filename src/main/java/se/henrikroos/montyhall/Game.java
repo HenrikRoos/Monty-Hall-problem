@@ -69,7 +69,8 @@ public class Game
      */
     int getCarLocation()
     {
-        return carLocation;
+        //return carLocation;
+	return 3;
     }
 
     /**
